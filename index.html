@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Site</title>
+  <style>
+    :root{--bg:#0b0c10;--panel:#111317;--text:#e6e6e6;--muted:#b7bec7;--accent:#6ae3ff;}
+    *{box-sizing:border-box} html,body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{width:min(1100px,92%);margin:0 auto;padding:56px 0}
+    header{position:sticky;top:0;background:#0d1117cc;border-bottom:1px solid #1b1f26;backdrop-filter:blur(8px)}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .section{padding:56px 0;border-bottom:1px solid #1b1f26}
+    h1{font-size:clamp(28px,4vw,44px);margin:0 0 8px} .sub{color:var(--muted);max-width:760px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .card{background:#0f141a;border:1px solid #1d2330;border-radius:14px;padding:18px}
+    footer{padding:24px 0;color:#9aa5b1}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">Your Project</div>
+        <div><a href="#about">About</a></div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap section">
+      <h1>Welcome</h1>
+      <p class="sub">Single-file site (HTML + embedded CSS). Host it on GitHub Pages for free.</p>
+      <div class="cards">
+        <div class="card"><strong>No JS needed.</strong><br/>All styling is inline here.</div>
+        <div class="card"><strong>Easy deploy.</strong><br/>Push this file as <code>index.html</code>.</div>
+        <div class="card"><strong>Custom domain.</strong><br/>Point DNS to GitHub (see steps below).</div>
+      </div>
+    </section>
+
+    <section id="about" class="wrap section">
+      <h2>About</h2>
+      <p>Replace this content with your real page. Everything is in one file.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="y"></span> Your Name</div>
+    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  </footer>
+</body>
+</html>
